@@ -40,9 +40,15 @@ def createDropdown(people):
 		print(""" <option value ="{0}">{1} {2}</option> """.format(persons[0],persons[1],persons[2]))
 	print(""" </select> <br>""")
 	
+def createradio(people):
+	for persons in people:
+		print(""" <input type = "radio" name="rbutton" value ="{0}" /> {1} {2}""".format(persons[0],persons[1],persons[2]))
+		print(""" <br>""")
+		
 def createtestform(people):
 	print(""" <form method="post" action="processform.cgi"> """)
 	createDropdown(people)
+	createradio(people)
 	print(""" <input type="submit" name= "submittest" value="Submit"> """)
 	print(""" </form>""")
 	
