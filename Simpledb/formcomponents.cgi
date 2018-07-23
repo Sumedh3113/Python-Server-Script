@@ -45,10 +45,17 @@ def createradio(people):
 		print(""" <input type = "radio" name="rbutton" value ="{0}" /> {1} {2}""".format(persons[0],persons[1],persons[2]))
 		print(""" <br>""")
 		
+def createcheckbox(people):
+	for persons in people:
+		print(""" <input type = "checkbox" name="cbox" value ="{0}" /> {1} {2}""".format(persons[0],persons[1],persons[2]))
+		print(""" <br>""")
+
+		
 def createtestform(people):
 	print(""" <form method="post" action="processform.cgi"> """)
 	createDropdown(people)
 	createradio(people)
+	createcheckbox(people)
 	print(""" <input type="submit" name= "submittest" value="Submit"> """)
 	print(""" </form>""")
 	
